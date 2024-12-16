@@ -20,6 +20,9 @@ pipeline {
                     '''
                 }
             }
+            test {
+                sh 'echo "Test stage"'
+            }
         }
     }
 
