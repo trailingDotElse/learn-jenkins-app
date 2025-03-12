@@ -8,11 +8,11 @@ pipeline {
     }
 
     stages {
-        // This is a single line comment
-        /*
-        this is a 
-        multiline comment
-        */
+        stage('Docker'){
+            steps{
+                sh 'docker build -t my-playwright .'
+            }
+        }
         stage ('Build') {
             agent {
                 docker {
